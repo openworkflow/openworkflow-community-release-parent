@@ -12,7 +12,7 @@
 
   <groupId>org.camunda</groupId>
   <artifactId>camunda-bpm-release-parent</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>0.2</version>
   <packaging>pom</packaging>
   <name>Camunda BPM - Release Parent Pom</name>
 
@@ -119,7 +119,7 @@ limitations under the License.</license.inlineHeader>
       <url>https://github.com/camunda/camunda-bpm-release-parent</url>
       <connection>scm:git:git@github.com:camunda/camunda-bpm-release-parent.git</connection>
       <developerConnection>scm:git:git@github.com:camunda/camunda-bpm-release-parent.git</developerConnection>
-      <tag>HEAD</tag>
+      <tag>0.2</tag>
     </scm>
 
     <issueManagement>
