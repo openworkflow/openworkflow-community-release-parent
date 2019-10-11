@@ -87,6 +87,13 @@ limitations under the License.</license.inlineHeader>
             </execution>
           </executions>
         </plugin>
+        <plugin>
+          <groupId>org.sonatype.plugins</groupId>
+          <artifactId>nexus-staging-maven-plugin</artifactId>
+          <configuration>
+            <stagingProgressTimeoutMinutes>10</stagingProgressTimeoutMinutes>
+          </configuration>
+        </plugin>
       </plugins>
     </pluginManagement>
   </build>
