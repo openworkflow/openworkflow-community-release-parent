@@ -11,7 +11,7 @@
   </parent>
 
   <artifactId>camunda-bpm-release-parent</artifactId>
-  <version>2.1.0-SNAPSHOT</version>
+  <version>2.1.0</version>
   <packaging>pom</packaging>
   <name>Camunda BPM - Release Parent Pom</name>
 
@@ -152,18 +152,17 @@ limitations under the License.</license.inlineHeader>
             <configuration>
                 <skip>${skip-third-party-bom}</skip>
                 <target>
-                  <copy file="${project.build.directory}/dependencies/dependencies-generated.txt" 
-                    tofile="${project.build.directory}/dependencies.txt">
+                  <copy file="${project.build.directory}/dependencies/dependencies-generated.txt" tofile="${project.build.directory}/dependencies.txt">
                     <filterchain>
                       <linecontains negate="true"><!-- Remove header line -->
-                        <contains value="The following files have been resolved"/>
+                        <contains value="The following files have been resolved" />
                       </linecontains>
                       <linecontainsregexp><!-- only keep the desired scopes -->
-                        <regexp pattern=":(?:${third-party-bom-scopes})$"/>
+                        <regexp pattern=":(?:${third-party-bom-scopes})$" />
                       </linecontainsregexp>
                       <tokenfilter>
                         <replaceregex pattern=":(?:${third-party-bom-scopes})$" replace="" /> <!-- Remove scope -->
-                        <trim/><!-- Remove whitespace -->
+                        <trim /><!-- Remove whitespace -->
                         <ignoreblank />
                       </tokenfilter>
                     </filterchain>
@@ -230,7 +229,7 @@ limitations under the License.</license.inlineHeader>
       <url>https://github.com/camunda/camunda-bpm-release-parent</url>
       <connection>scm:git:git@github.com:camunda/camunda-bpm-release-parent.git</connection>
       <developerConnection>scm:git:git@github.com:camunda/camunda-bpm-release-parent.git</developerConnection>
-      <tag>HEAD</tag>
+      <tag>2.1.0</tag>
     </scm>
 
     <issueManagement>
