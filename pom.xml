@@ -58,9 +58,9 @@ limitations under the License.</license.inlineHeader>
   </properties>
 
   <build>
-    <!-- define common configuration for license checks -->
     <pluginManagement>
       <plugins>
+        <!-- define common configuration for license checks -->
         <!-- license plugin -->
         <plugin>
           <groupId>com.mycila</groupId>
@@ -104,6 +104,20 @@ limitations under the License.</license.inlineHeader>
           <artifactId>nexus-staging-maven-plugin</artifactId>
           <configuration>
             <stagingProgressTimeoutMinutes>10</stagingProgressTimeoutMinutes>
+          </configuration>
+        </plugin>
+        <!-- third party license handling -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-shade-plugin</artifactId>
+          <version>3.2.4</version>
+          <configuration>
+            <!-- Whenever we shade dependencies, concatenate their NOTICE files -->
+            <transformers combine.children="append">
+              <transformer implementation="org.apache.maven.plugins.shade.resource.ApacheNoticeResourceTransformer">
+                <addHeader>false</addHeader>
+              </transformer>
+            </transformers>
           </configuration>
         </plugin>
       </plugins>
@@ -198,19 +212,6 @@ limitations under the License.</license.inlineHeader>
             </configuration>
           </execution>
         </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-shade-plugin</artifactId>
-        <version>3.2.4</version>
-        <configuration>
-          <!-- Whenever we shade dependencies, concatenate their NOTICE files -->
-          <transformers combine.children="append">
-            <transformer implementation="org.apache.maven.plugins.shade.resource.ApacheNoticeResourceTransformer">
-              <addHeader>false</addHeader>
-            </transformer>
-          </transformers>
-        </configuration>
       </plugin>
     </plugins>
   </build>
