@@ -13,10 +13,10 @@
   <artifactId>camunda-bpm-release-parent</artifactId>
   <version>2.3.0-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>Camunda BPM - Release Parent Pom</name>
+  <name>Camunda Platform - Release Parent Pom</name>
 
   <description>
-    This pom defines the required plugins and profiles to allow a camunda bpm release build.
+    This pom defines the required plugins and profiles to allow a Camunda Platform release build.
   </description>
 
   <properties>
@@ -233,7 +233,7 @@ limitations under the License.</license.inlineHeader>
     <developers>
       <developer>
         <id>camunda.org</id>
-        <name>camunda BPM Community</name>
+        <name>Camunda Platform Community</name>
         <organization>camunda.org</organization>
         <organizationUrl>http://camunda.org</organizationUrl>
       </developer>

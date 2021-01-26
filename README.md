@@ -1,7 +1,7 @@
 camunda-bpm-release-parent
 ======================
 
-Pom which can be inherited for camunda bpm releases defining some bpm release properties.
+Pom which can be inherited for Camunda Platform releases defining some bpm release properties.
 It is a child of [camunda-release-parent](https://github.com/camunda/camunda-release-parent).
 
 License
