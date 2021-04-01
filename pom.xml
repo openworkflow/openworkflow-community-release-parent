@@ -84,6 +84,7 @@ limitations under the License.</license.inlineHeader>
               <exclude>**/org/camunda/bpm/engine/impl/digest/_apacheCommonsCodec/*.java</exclude>
               <exclude>**/org/camunda/bpm/licensecheck/_apacheCommonsCodec/*.java</exclude>
               <exclude>**/node_modules/**</exclude>
+              <exclude>.mvn/wrapper/MavenWrapperDownloader.java</exclude>
             </excludes>
             <mapping>
               <java>SLASHSTAR_STYLE</java>
