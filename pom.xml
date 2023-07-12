@@ -28,6 +28,7 @@
     <version.java>1.8</version.java>
 
     <plugin.version.license>3.0</plugin.version.license>
+    <plugin.version.nexus-staging>1.6.13</plugin.version.nexus-staging>
 
     <license.inlineHeader>
 Copyright Camunda Services GmbH and/or licensed to Camunda Services GmbH
