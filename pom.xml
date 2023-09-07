@@ -24,11 +24,14 @@
     <!-- Avoid the message "[WARNING] Using platform encoding (UTF-8 actually) ... also for the failsafe plugin -->
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-    <!-- we use java 1.8 for our projects -->
-    <version.java>1.8</version.java>
+    <!-- we use Java 11 for our projects -->
+    <version.java>11</version.java>
 
     <plugin.version.license>3.0</plugin.version.license>
     <plugin.version.nexus-staging>1.6.13</plugin.version.nexus-staging>
+    <plugin.version.compiler>3.6.2</plugin.version.compiler>
+    <plugin.version.javadoc>3.0.1</plugin.version.javadoc>
+    <plugin.version.maven-bundle>4.1.0</plugin.version.maven-bundle>
 
     <license.inlineHeader>
 Copyright Camunda Services GmbH and/or licensed to Camunda Services GmbH
@@ -120,6 +123,14 @@ limitations under the License.</license.inlineHeader>
                 <addHeader>false</addHeader>
               </transformer>
             </transformers>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${plugin.version.compiler}</version>
+          <configuration>
+            <release>${version.java}</release>
           </configuration>
         </plugin>
       </plugins>
